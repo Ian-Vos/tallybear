@@ -43,13 +43,18 @@ module.exports = function (ctx) {
       //            (not treeshaking Quasar; biggest bundle size; convenient)
       all: 'auto',
 
-      components: [],
+      components: [        
+        'QCard',
+        'QCardSection',
+        'QCardActions'
+      ],
       directives: [],
 
       // Quasar plugins
       plugins: [],
+
       config: {
-        dark: 'true' // or Boolean true/false
+        dark: 'auto' // or Boolean true/false
       }
     },
 
