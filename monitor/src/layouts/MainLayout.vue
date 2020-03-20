@@ -2,14 +2,16 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
+
+        <!-- Hamburger menu button, currently not used. might use when there will be more pages -->
+        <!-- <q-btn
           flat
           dense
           round
           icon="menu"
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
-        />
+        /> -->
 
         <q-toolbar-title>
           Tally Bear
