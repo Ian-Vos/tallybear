@@ -12,10 +12,10 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Tally Bear
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div><img src="statics/icons/favicon-32x32.png"/></div>
       </q-toolbar>
     </q-header>
 
