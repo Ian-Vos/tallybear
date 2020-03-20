@@ -1,19 +1,31 @@
 <template>
-  <q-page class="">
-    <div class="q-pa-md">
-      <div class="column">
-        <div class="col-5">
-          <h1>Hello</h1>
-        </div>
-        <div class="col-5">
-          <h1>HI</h1>
-        </div>
-      </div>
-      <div class="column">
-        <h1>HI</h1>
-      </div>
+  <div class="q-pa-lg row items-start q-gutter-lg">
+
+    <div class="col-4 row">
+      <q-card class="my-card q-pb-lg col-12 q-mb-lg">
+        <q-card-section>
+          <div class="text-h6">Controlls</div>
+          These are the most important tally system Controlls
+        </q-card-section>
+      </q-card>
+      <q-card class="my-card q-pb-lg col-12">
+        <q-card-section>
+          <div class="text-h6">Less used</div>
+          These are the standard not much used tally system Controlls
+        </q-card-section>
+      </q-card>
     </div>
-  </q-page>
+
+    <div class="row col">
+      <q-card class="my-card q-pb-lg col-12">
+        <q-card-section>
+          <div class="text-h6">Tallies</div>
+          This is a table with connected tallies
+        </q-card-section>
+      </q-card>
+    </div>
+
+  </div>
 </template>
 
 <script>
