@@ -1,5 +1,8 @@
 import { app, BrowserWindow, nativeTheme } from 'electron'
 
+// Import the UdpSocket Class
+var UdpSocket = require("./udpsocket");
+
 try {
   if (process.platform === 'win32' && nativeTheme.shouldUseDarkColors === true) {
     require('fs').unlinkSync(require('path').join(app.getPath('userData'), 'DevTools Extensions'))
@@ -21,6 +24,7 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
+    
     width: 1000,
     height: 600,
     useContentSize: true,
