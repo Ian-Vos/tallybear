@@ -84,10 +84,12 @@ function parse_packet(s, data, port, ip)
   print("Parsing packet")
   command = string.byte(data)
   if command == 1 then
+    -- Identify
     print("Command 1")
     message = string.format(string.char(4) .. "%s,%d", node.chipid(), channel)
     s:send(port, ip, message)
   elseif command == 2 then
+    --  Change the LED state to current live cam
     input = string.byte(data, 2)
     mask = bit.bit(channel)
     if bit.band(mask, input) > 0 then
@@ -98,6 +100,7 @@ function parse_packet(s, data, port, ip)
       --print("LED off!")
     end
   elseif command == 3 then
+    -- Change the assigned camera
     print("Command 3")
     print(node.chipid())
     print(tonumber(string.sub(data,2,7),16))
@@ -108,6 +111,7 @@ function parse_packet(s, data, port, ip)
       blink(LED_BLUE)
     end
   elseif command == 4 then
+    -- Change the brightness of the LED
     print("Command 4")
     if node.chipid() == tonumber(string.sub(data,2,7),16) then
       for i,led in ipairs(leds) do
